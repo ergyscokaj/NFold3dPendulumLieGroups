@@ -190,35 +190,46 @@ end
 figure;
 %subplot(1,2,1);
 yyaxis left
-semilogy(Prange,accConst,'r-o','linewidth',3,'Markersize',10);
+semilogy(Prange,accConst,'-o','color',"#1f77b4",'linewidth',3,'Markersize',10);
 hold on;
-semilogy(Prange,accVar,'k-*','linewidth',3,'Markersize',10);
-xlabel('Number of connected pendulums','FontSize',30);
-ylabel('Accuracy at T=3','FontSize',30);
+semilogy(Prange,accVar,'-*','color',"#ff7f0e", 'linewidth',3,'Markersize',10);
+xlabel('Number of connected pendulums','FontSize',60);
+ylabel('Accuracy at T=3','FontSize',60);
 hold on;
 ax = gca;
 %grid on;
 set(ax,'xcolor','k')
 set(ax,'ycolor','k')
 yyaxis right
+grid on;
 ax = gca;
-plot(Prange, steps,'b-s','linewidth',3,'Markersize',10);
-set(ax,'ycolor','b')
-ax.FontSize = 20;
-%ax.YAxis.FontSize = 20;
-ylabel('Number of time steps','FontSize',30);
-%ax.YAxis.FontSize = 20;
-%ax.XAxis.FontSize = 20;
-%ax.YAxis.FontSize = 20;
-% xlabel('Number of connected pendulums','FontSize',30);
-% ylabel('Accuracy at T=3','FontSize',30)
+ax.Color = "#eaeaf3";
+% ax.XAxis.FontSize = 25;
+% ax.YAxis.FontSize = 25;
+ax.XGrid = 'on';
+ax.YGrid = 'on';
+ax.GridColorMode = 'manual';
+ax.GridColor = 'w';
+ax.GridAlpha = 1;
+ax.GridLineStyle = '-'; 
+ax.YMinorGrid = 'off';
+%          ax.YColor = 'k';
+%          ax.XColor = 'k';
 
-legend('Accuracy RKMK5','Accuracy RKMK(5,4)','Number of time steps','FontSize',30);
-%set(gca,'XTick',Prange,'XGrid','on')
+% colororder(["#1f77b4";"#ff7f0e";"#2ca02c";"#d62728";"#9467bd";"#8c564b";"#e377c2";"#7f7f7f";"#bcbd22";"#17becf"])
+        
 
-% title("Accuracy against the number of pendulums",'FontSize',25);
-%title("Accuracy against the number of pendulums",'FontSize',18);
+plot(Prange, steps,'-s','color',"#2ca02c",'linewidth',3,'Markersize',10);
+set(ax,'ycolor','k')
+ax.FontSize = 60;
 
+%ax.YAxis.FontSize = 20;
+ylabel('Number of time steps','FontSize',60);
+
+legend('Accuracy RKMK5','Accuracy RKMK(5,4)','Number of time steps','FontSize',60, 'Location', 'southeast', Color = "#eaeaf3");
+
+title("Accuracy against the number of pendulums",'FontSize',75);
+set(ax,'TickLength',[0 0]);
 %grid off
 
 
@@ -231,22 +242,30 @@ options = odeset('AbsTol',tol);
 zC = zC';
 zC=reorder(zC);
 %subplot(1,2,2);
-plot(TT(1:end-1),diff(TT),'k--','linewidth',2);
+plot(TT(1:end-1),diff(TT),'-','color',"#ff7f0e",'linewidth',2);
 hold on;
-plot(timeSol(1:end-1),diff(timeSol),'b:','linewidth',2);
+plot(timeSol(1:end-1),diff(timeSol),'-','color',"#d62728",'linewidth',2);
 hold on;
-plot(timeSol(1:end-1),0*timeSol(1:end-1) + dt,'r-','linewidth',2);
+plot(timeSol(1:end-1),0*timeSol(1:end-1) + dt,'-','color',"#1f77b4",'linewidth',2);
 
-legend('RKMK(5,4)','ODE45','RKMK5','FontSize',30,'Location','northwest');
+legend('RKMK(5,4)','ODE45','RKMK5','FontSize',60,'Location','northeast', Color = "#eaeaf3");
 xlim([0 T])
-xlabel("Time",'fontsize',30);
-ylabel("Stepsize",'fontsize',30);
+xlabel("Time",'fontsize',60);
+ylabel("Stepsize",'fontsize',60);
 ax = gca;
-ax.XAxis.FontSize = 30;
-ax.YAxis.FontSize = 30;
+ax.Color = "#eaeaf3";
+ax.XAxis.FontSize = 60;
+ax.YAxis.FontSize = 60;
+ax.XGrid = 'on';
+ax.YGrid = 'on';
+ax.GridColorMode = 'manual';
+ax.GridColor = 'w';
+ax.GridAlpha = 1;
+ax.GridLineStyle = '-'; 
+ax.YMinorGrid = 'off';
 stringa = 'Comparison of stepsize variation with N='+string(P)+' pendulums';
-%title(stringa,'FontSize',18);
-
+title(stringa,'FontSize',75);
+set(ax,'TickLength',[0 0]);
 
 % Prange = 20;
 % for P = Prange

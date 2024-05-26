@@ -204,24 +204,10 @@ set(0,'DefaultTextInterpreter','latex')
     xlabel('Timestep')
     ylabel('Global error')
     title("Lie Euler",'FontSize', 25)
-    legend('Global error','Order 1','Order 2','Order 3','Order 4','FontSize',20,'Location', 'southeast', Color = "#eaeaf3");
+    legend('Global error','Order 1','Order 2','Order 3','Order 4','FontSize',14,'Location', 'Best');
     ax = gca;
-    ax.Color = "#eaeaf3";
-    ax.XAxis.FontSize = 25;
-    ax.YAxis.FontSize = 25;
-    ax.XGrid = 'on';
-    ax.YGrid = 'on';
-    ax.GridColor = 'w';
-    ax.GridAlpha = 1;
-    ax.GridLineStyle = '-'; 
-    ax.YColor = 'k';
-    ax.XColor = 'k';
-    ax.MinorGridColorMode = 'manual';
-    ax.XMinorGrid = 'on';
-    ax.YMinorGrid = 'on';
-    ax.MinorGridColor = 'w';
-    ax.MinorGridAlpha = 1;
-    set(ax,'TickLength',[0 0]);
+    ax.XAxis.FontSize = 16;
+    ax.YAxis.FontSize = 16;
 
     %% Convergence rate of Euler Heun
     ord1 = (dts/dts(1)).^(1)*errorEH1(1); 
@@ -234,25 +220,11 @@ set(0,'DefaultTextInterpreter','latex')
     colororder(["#1f77b4";"#ff7f0e";"#2ca02c";"#d62728";"#9467bd";"#8c564b";"#e377c2";"#7f7f7f";"#bcbd22";"#17becf"])
     xlabel('Timestep')
     ylabel('Global error')
-    title("Lie Euler Heun",'FontSize', 25)
-    legend('Global error','Order 1','Order 2','Order 3','Order 4','FontSize',20,'Location', 'southeast', Color = "#eaeaf3");
+    title("Euler Heun",'FontSize', 25)
+    legend('Global error','Order 1','Order 2','Order 3','Order 4','FontSize',14,'Location', 'Best');
     ax = gca;
-    ax.Color = "#eaeaf3";
-    ax.XAxis.FontSize = 25;
-    ax.YAxis.FontSize = 25;
-    ax.XGrid = 'on';
-    ax.YGrid = 'on';
-    ax.GridColor = 'w';
-    ax.GridAlpha = 1;
-    ax.GridLineStyle = '-'; 
-    ax.YColor = 'k';
-    ax.XColor = 'k';
-    ax.MinorGridColorMode = 'manual';
-    ax.XMinorGrid = 'on';
-    ax.YMinorGrid = 'on';
-    ax.MinorGridColor = 'w';
-    ax.MinorGridAlpha = 1;
-    set(ax,'TickLength',[0 0]);
+    ax.XAxis.FontSize = 16;
+    ax.YAxis.FontSize = 16;
 
 
     %% Convergence rate of RKMK4
@@ -267,24 +239,10 @@ set(0,'DefaultTextInterpreter','latex')
     xlabel('Timestep')
     ylabel('Global error')
     title("RKMK4",'FontSize', 25)
-    legend('Global error','Order 1','Order 2','Order 3','Order 4','FontSize',20,'Location', 'southeast', Color = "#eaeaf3");
+    legend('Global error','Order 1','Order 2','Order 3','Order 4','FontSize',14,'Location', 'Best');
     ax = gca;
-    ax.Color = "#eaeaf3";
-    ax.XAxis.FontSize = 25;
-    ax.YAxis.FontSize = 25;
-    ax.XGrid = 'on';
-    ax.YGrid = 'on';
-    ax.GridColor = 'w';
-    ax.GridAlpha = 1;
-    ax.GridLineStyle = '-'; 
-    ax.YColor = 'k';
-    ax.XColor = 'k';
-    ax.MinorGridColorMode = 'manual';
-    ax.XMinorGrid = 'on';
-    ax.YMinorGrid = 'on';
-    ax.MinorGridColor = 'w';
-    ax.MinorGridAlpha = 1;
-    set(ax,'TickLength',[0 0]);
+    ax.XAxis.FontSize = 16;
+    ax.YAxis.FontSize = 16;
 
      %% Convergence rate of RKMK4 commutator Free
     ord1 = (dts/dts(1)).^(1)*errorRK4FR1(1);
@@ -297,25 +255,11 @@ set(0,'DefaultTextInterpreter','latex')
     colororder(["#1f77b4";"#ff7f0e";"#2ca02c";"#d62728";"#9467bd";"#8c564b";"#e377c2";"#7f7f7f";"#bcbd22";"#17becf"])
     xlabel('Timestep')
     ylabel('Global error')
-    title("CF4",'FontSize', 25)
-    legend('Global error','Order 1','Order 2','Order 3','Order 4','FontSize',20,'Location', 'southeast', Color = "#eaeaf3");
+    title("RKMK4 Commutator FREE",'FontSize', 25)
+    legend('Global error','Order 1','Order 2','Order 3','Order 4','FontSize',14,'Location', 'Best');
     ax = gca;
-    ax.Color = "#eaeaf3";
-    ax.XAxis.FontSize = 25;
-    ax.YAxis.FontSize = 25;
-    ax.XGrid = 'on';
-    ax.YGrid = 'on';
-    ax.GridColor = 'w';
-    ax.GridAlpha = 1;
-    ax.GridLineStyle = '-'; 
-    ax.YColor = 'k';
-    ax.XColor = 'k';
-    ax.MinorGridColorMode = 'manual';
-    ax.XMinorGrid = 'on';
-    ax.YMinorGrid = 'on';
-    ax.MinorGridColor = 'w';
-    ax.MinorGridAlpha = 1;
-    set(ax,'TickLength',[0 0]);
+    ax.XAxis.FontSize = 16;
+    ax.YAxis.FontSize = 16;
 
     %% Convergence rate of RKMK4 2 commutators
     ord1 = (dts/dts(1)).^(1)*errorRK4_2Comm1(1);
@@ -329,24 +273,10 @@ set(0,'DefaultTextInterpreter','latex')
     xlabel('Timestep')
     ylabel('Global error')
     title("RKMK4 with 2 Commutators",'FontSize', 25)
-    legend('Global error','Order 1','Order 2','Order 3','Order 4','FontSize',20,'Location', 'southeast', Color = "#eaeaf3");
+    legend('Global error','Order 1','Order 2','Order 3','Order 4','FontSize',14,'Location', 'Best');
     ax = gca;
-    ax.Color = "#eaeaf3";
-    ax.XAxis.FontSize = 25;
-    ax.YAxis.FontSize = 25;
-    ax.XGrid = 'on';
-    ax.YGrid = 'on';
-    ax.GridColor = 'w';
-    ax.GridAlpha = 1;
-    ax.GridLineStyle = '-'; 
-    ax.YColor = 'k';
-    ax.XColor = 'k';
-    ax.MinorGridColorMode = 'manual';
-    ax.XMinorGrid = 'on';
-    ax.YMinorGrid = 'on';
-    ax.MinorGridColor = 'w';
-    ax.MinorGridAlpha = 1;
-    set(ax,'TickLength',[0 0]);
+    ax.XAxis.FontSize = 16;
+    ax.YAxis.FontSize = 16;
 
     %% Convergence rate of RKMK3 
     ord1 = (dts/dts(1)).^(1)*errorRK31(1);
@@ -360,24 +290,10 @@ set(0,'DefaultTextInterpreter','latex')
     xlabel('Timestep')
     ylabel('Global error')
     title("RKMK3",'FontSize', 25)
-    legend('Global error','Order 1','Order 2','Order 3','Order 4','FontSize',20,'Location', 'southeast', Color = "#eaeaf3");
+    legend('Global error','Order 1','Order 2','Order 3','Order 4','FontSize',14,'Location', 'Best');
     ax = gca;
-    ax.Color = "#eaeaf3";
-    ax.XAxis.FontSize = 25;
-    ax.YAxis.FontSize = 25;
-    ax.XGrid = 'on';
-    ax.YGrid = 'on';
-    ax.GridColor = 'w';
-    ax.GridAlpha = 1;
-    ax.GridLineStyle = '-'; 
-    ax.YColor = 'k';
-    ax.XColor = 'k';
-    ax.MinorGridColorMode = 'manual';
-    ax.XMinorGrid = 'on';
-    ax.YMinorGrid = 'on';
-    ax.MinorGridColor = 'w';
-    ax.MinorGridAlpha = 1;
-    set(ax,'TickLength',[0 0]);
+    ax.XAxis.FontSize = 16;
+    ax.YAxis.FontSize = 16;
 
     sgtitle("Convergence rate comparison against ODE45",'FontSize', 30);
     set(gcf, 'Position',  [0   200 500 700]);
